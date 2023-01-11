@@ -1,8 +1,8 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppBody from './components/AppBody.vue'
-import AppFooter from './components/AppFooter.vue'
 import AppInfo from './components/AppInfo.vue'
+import AppFooter from './components/AppFooter.vue'
 
 
 export default {
@@ -18,6 +18,7 @@ export default {
 <template>
   <AppHeader />
   <AppBody />
+  <AppInfo/>
   <AppFooter />
 </template>
 

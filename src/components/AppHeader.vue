@@ -93,6 +93,10 @@ export default {
         justify-content: space-between;
         padding: 30px 0 0;
 
+        .logo{
+            padding-bottom: 10px;
+        }
+
         nav{
             display: flex;
             align-items: center;
@@ -106,7 +110,7 @@ export default {
                     display:flex;
                     align-items: center;
                     margin: 0 15px;
-                    height: 110px;
+                    height: 120px;
                     text-decoration: none;
                     font-weight: 600;
                     font-size: 13px;
