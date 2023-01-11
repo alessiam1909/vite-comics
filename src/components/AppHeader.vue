@@ -2,7 +2,8 @@
 export default {
     data() {
         return {
-            menu: [
+            logo: "src/assets/img/dc-logo.png",
+            nav: [
                 {
                     label: 'CHARACTERS',
                     url: '#',
@@ -59,10 +60,22 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        
-    </div>
+    <header>
+       <a href="/" class="brand">
+            <img :src="logo" alt="logoDc">
+       </a>
+        <nav>
+            <ul>
+                <li v-for="(item, index) in nav" :key="index">
+                    <a :href="item.url" :class="item.active ? 'active' : ''">
+                {{item.label}}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </template>
-<style lang="sass">
-    
+<style lang="scss">
+    @use './src/styles/partials/_variables.scss' as *;
+    @use './src/styles/partials/_mixins.scss' as *;
 </style>
