@@ -59,15 +59,16 @@ export default {
     }
 }
 </script>
+
 <template lang="">
     <header>
-       <a href="/" class="brand">
+       <a href="/" class="logo">
             <img :src="logo" alt="logoDc">
        </a>
         <nav>
             <ul>
-                <li v-for="(item, index) in nav" :key="index">
-                    <a :href="item.url" :class="item.active ? 'active' : ''">
+                <li v-for="(item, index) in nav" :key="index" @click="'active'"> 
+                    <a :href="item.url" :class="item.active ? 'active' : ''" >
                 {{item.label}}
                     </a>
                 </li>
@@ -75,7 +76,44 @@ export default {
         </nav>
     </header>
 </template>
+
 <style lang="scss">
     @use './src/styles/partials/_variables.scss' as *;
     @use './src/styles/partials/_mixins.scss' as *;
+
+    header{
+        @include width70;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+
+        nav{
+            display: flex;
+            align-items: center;
+
+            ul{
+                @include center;
+                list-style-type: none;
+
+    
+                li a {
+                    margin: 0 15px;
+                    padding: 5px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.75);
+                    
+                
+    
+                    &.active,
+                    &:hover {
+                        color: $blue;
+                        border-bottom:5px solid $blue;
+                    }
+                }
+            }
+        }
+
+    }
+
 </style>
