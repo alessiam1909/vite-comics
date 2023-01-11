@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            activeItem: 0,
             logo: "src/assets/img/dc-logo.png",
             nav: [
                 {
@@ -56,6 +57,11 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        changeItem(index){
+            this.activeItem = index
+        },
     }
 }
 </script>
@@ -67,8 +73,8 @@ export default {
        </a>
         <nav>
             <ul>
-                <li v-for="(item, index) in nav" :key="index" @click="'active'"> 
-                    <a :href="item.url" :class="item.active ? 'active' : ''" >
+                <li v-for="(item, index) in nav" :key="index" @click="changeItem(index)" > 
+                    <a :href="item.url"  :class="(activeItem === index) ? 'active' : '' ">
                 {{item.label}}
                     </a>
                 </li>
@@ -85,7 +91,7 @@ export default {
         @include width70;
         display: flex;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 30px 0 0;
 
         nav{
             display: flex;
@@ -97,10 +103,13 @@ export default {
 
     
                 li a {
+                    display:flex;
+                    align-items: center;
                     margin: 0 15px;
-                    padding: 5px;
+                    height: 110px;
                     text-decoration: none;
                     font-weight: 600;
+                    font-size: 13px;
                     color: rgba(0, 0, 0, 0.75);
                     
                 

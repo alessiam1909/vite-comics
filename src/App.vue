@@ -2,11 +2,14 @@
 import AppHeader from './components/AppHeader.vue'
 import AppBody from './components/AppBody.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppInfo from './components/AppInfo.vue'
+
 
 export default {
   components: {
     AppHeader,
     AppBody,
+    AppInfo,
     AppFooter
   }
 }
