@@ -131,6 +131,10 @@ export default {
                 margin: 20px 15px;
                 padding: 10px ;
 
+                &:focus, &:active{
+                        outline: none;
+                }
+
                 a{
                     text-decoration: none;
                     color: white;
