@@ -120,8 +120,9 @@ export default {
                 
     
                     &.active,
-                    &:hover {
+                    &:hover, &:focus {
                         color: $blue;
+                        outline: none;
                         border-bottom:5px solid $blue;
                     }
                 }

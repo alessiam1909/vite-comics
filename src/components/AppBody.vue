@@ -99,10 +99,11 @@
                 font-weight: 600;
                 margin: 40px 0 20px 0;
 
-                &:active, &:hover{
+                &:active, &:hover, &:focus{
                     border: none;
                     background-color: #ffffffd5;
                     color: rgb(0, 0, 0);
+                    outline: none;
                     transition: background-color, color, 2s;
                 }
                 
