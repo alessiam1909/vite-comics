@@ -91,7 +91,7 @@ export default {
         @include width70;
         display: flex;
         justify-content: space-between;
-        padding: 30px 0 0;
+        padding: 15px 0 0;
 
         .logo{
             padding-bottom: 10px;
