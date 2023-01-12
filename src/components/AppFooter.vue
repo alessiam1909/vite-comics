@@ -108,6 +108,9 @@ export default {
                     a{
                         text-decoration: none;
                         color: grey;
+                        &:focus, &:active{
+                            outline: none
+                        }
                     }
                 }
             }
@@ -132,6 +135,10 @@ export default {
                     text-decoration: none;
                     color: white;
                     font-weight: 600;
+
+                    &:focus, &:active{
+                        outline: none;
+                    }
                 }
             }
 

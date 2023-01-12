@@ -89,6 +89,10 @@ export default {
                     .link{
                         text-decoration: none;
                         color: white;
+
+                        &:focus, &:active{
+                            outline: none;
+                        }
                     }
 
                     
