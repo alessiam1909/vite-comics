@@ -115,6 +115,7 @@ export default {
                     font-weight: 600;
                     font-size: 13px;
                     color: rgba(0, 0, 0, 0.75);
+                    border-bottom: 5px solid white ;
                     
                 
     
